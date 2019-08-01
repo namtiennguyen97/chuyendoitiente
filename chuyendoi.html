@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ.</title>
+    <script src="hoatdong.js"></script>
+</head>
+<body>
+
+<form>
+
+    <span>Nhập số tiền: </span><input id="soTien" value="">
+    <span>From:</span>
+    <select id="from">
+
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+        <option value="0.8">EU</option>
+        <option value="20000">JP</option>
+    </select>
+    <span>To</span>
+    <select id="to">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+        <option value="0.8">EU</option>
+        <option value="20000">JP</option>
+    </select>
+    <span>Submit</span>
+    <button type="button" onclick="convert()">Convert</button>
+<p id="skull">Result: </p>
+<script>
+    let a = document.getElementById("soTien");
+    let b = document.getElementById("to");
+    let c = document.getElementById("from");
+    let d = document.getElementById("ketqua");
+    function convert() {
+
+        let kq = (Number(a.value)* Number(b.value)) / Number(c.value);
+        document.getElementById("skull").innerHTML = "Result:" + kq;
+
+
+    }
+</script>
+
+
+</form>
+
+</body>
+</html>
